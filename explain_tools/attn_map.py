@@ -4,6 +4,7 @@ import torch
 import cv2
 
 
+
 def get_attention_map(img, model, num_heads=12, get_mask=False):
     """
     Return a numpy array that'll be ready to be plotted to generate \
@@ -12,7 +13,8 @@ def get_attention_map(img, model, num_heads=12, get_mask=False):
     Args:
         img: An array-like input with dimension (B, C, H, W), where B is the \
             batch size, C is num_channels, H is height, and W is width
-        model: A transformer model from timm
+        model: A transformer model from timm, one example being \
+            "vit_base_patch16_224"
         num_heads: An integer representing the number of heads of the model \
             default 12
         get_mask: Whether to mask the attention map, default False
